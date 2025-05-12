@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Rupak Hospital - Your Health, Our Priority</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f7fafd;
+        }
+        header {
+        background-color: #0b5ed7;
+        color: white;
+        padding: 20px 40px;
+        text-align: center;
+        }
+        nav {
+        display: flex;
+        justify-content: center;
+        background-color: #084298;
+        padding: 10px 0;
+        }
+        nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 500;
+        }
+        .hero {
+        text-align: center;
+        padding: 60px 20px;
+        background-image: linear-gradient(to right, #e3f2fd, #bbdefb);
+        }
+        .hero h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        color: #0b5ed7;
+        }
+        .hero p {
+        font-size: 1.2em;
+        color: #333;
+        }
+        .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 40px;
+        max-width: 1000px;
+        margin: auto;
+        }
+        .card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 {
+        margin-top: 0;
+        color: #0b5ed7;
+        }
+        footer {
+        background-color: #0b5ed7;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 50px;
+        }
+    </style>
+    </head>
+    <body>
+
+    <header>
+        <h1>Rupak Multispeciality Hospital</h1>
+        <p>Advanced Care. Trusted Professionals. Compassionate Service.</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Doctors</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Your Health is Our Priority</h1>
+        <p>Talk to our AI Medical Assistant for instant support and general advice</p>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+        <h3>24x7 Emergency</h3>
+        <p>Our emergency department is always open with trained professionals ready to serve.</p>
+        </div>
+        <div class="card">
+        <h3>Expert Doctors</h3>
+        <p>Consult with top specialists in cardiology, neurology, orthopedics, and more.</p>
+        </div>
+        <div class="card">
+        <h3>Online Consultations</h3>
+        <p>Connect with doctors from the comfort of your home. Quick, easy, and secure.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Rupak Hospital. All rights reserved.
+    </footer>
+
+    <!-- 🔵 Watson Assistant Chatbot Integration -->
+    <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "a41f69b9-851b-435a-b3e6-21ece0e40059", // The ID of this integration.
+        region: "au-syd", // The region your integration is hosted in.
+        serviceInstanceID: "120a3d34-13aa-4b98-9e14-93e9ada39aa1", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+    });
+</script>
+
+</body>
+</html>
